@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: gf2tool
+
+  main:
+    lazy-initialization: true # for dev
+
+  config:
+    import:
+      - optional:file:../.env[.properties]
+
+  # DB
+  datasource:
+    url: ${DATASOURCE_URL_LOCAL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${MYSQL_ROOT_PASSWORD}
+
+  # JPA/Hibernates
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        "[format_sql]": true
+        dialect: org.hibernate.dialect.MySQL8Dialect
