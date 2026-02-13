@@ -1,8 +1,11 @@
 package com.kkanyo.gf2tool.domain.doll.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.kkanyo.gf2tool.domain.doll.dto.DollResponseDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollSaveRequestDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollSaveResponseDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollStatResponseDto;
@@ -17,11 +20,20 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true) // 지연 로딩을 위해 기본적으로 트랜잭션 내에서 동작하도록 설정
 public class DollService {
 
     private final DollRepository dollRepository;
 
     private final DollStatRepository dollStatRepository;
+
+    public List<DollResponseDto> findAll() {
+        List<Doll> dolls = dollRepository.findAll();
+
+        return dolls.stream()
+                .map(DollResponseDto::fromEntity)
+                .toList();
+    }
 
     public DollStatResponseDto getDollDetail(@NonNull Long id) {
         DollStat doll = dollStatRepository.findById(id)
@@ -32,7 +44,7 @@ public class DollService {
     }
 
     @Transactional
-    public DollSaveResponseDto saveDoll(DollSaveRequestDto dollRequestDto, DollStatSaveRequestDto dollStatRequestDto) {
+    public DollSaveResponseDto save(DollSaveRequestDto dollRequestDto, DollStatSaveRequestDto dollStatRequestDto) {
         Doll doll = dollRequestDto.toEntity();
         doll.setDollStat(dollStatRequestDto.toEntity());
 

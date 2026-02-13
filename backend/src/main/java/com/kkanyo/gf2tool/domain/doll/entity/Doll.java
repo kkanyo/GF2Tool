@@ -28,7 +28,7 @@ public class Doll {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT
     private Long id;
 
-    @Column(nullable = false)
+    // @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
