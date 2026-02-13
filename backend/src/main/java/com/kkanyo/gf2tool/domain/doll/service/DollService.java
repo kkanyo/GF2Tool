@@ -36,11 +36,11 @@ public class DollService {
     }
 
     public DollStatResponseDto getDollDetail(@NonNull Long id) {
-        DollStat doll = dollStatRepository.findById(id)
+        DollStat dollStat = dollStatRepository.findById(id)
                 .orElseThrow(
                         () -> new IllegalArgumentException(String.format("[ERROR] Not Exist Doll Stat [id:%d]", id)));
 
-        return DollStatResponseDto.fromEntity(doll);
+        return DollStatResponseDto.fromEntity(dollStat);
     }
 
     @Transactional
