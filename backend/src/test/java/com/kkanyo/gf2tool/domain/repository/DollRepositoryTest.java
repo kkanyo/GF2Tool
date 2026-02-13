@@ -21,7 +21,7 @@ public class DollRepositoryTest {
     private DollRepository dollRepository;
 
     @Test
-    @DisplayName("인형 저장 시 연관된 스탯도 함꼐 저장되어야 한다 (Cascasde 테스트)")
+    @DisplayName("인형 저장 시 연관된 스탯도 함꼐 저장되어야 한다 (Cascade 테스트)")
     void saveDollWithStat() {
         DollStat stat = DollStat.builder()
                 .attack(100)
@@ -45,6 +45,7 @@ public class DollRepositoryTest {
                 .dollStat(stat)
                 .build();
 
+        @SuppressWarnings("null")
         Doll savedDoll = dollRepository.save(doll);
 
         assertThat(savedDoll).isNotNull();
