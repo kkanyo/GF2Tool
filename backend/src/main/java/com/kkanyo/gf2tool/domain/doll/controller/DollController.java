@@ -2,6 +2,9 @@ package com.kkanyo.gf2tool.domain.doll.controller;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +30,9 @@ public class DollController {
     private final DollService dollService;
 
     @GetMapping
-    public ResponseEntity<List<DollResponseDto>> getDollList() {
-        return ResponseEntity.ok(dollService.findAll());
+    public ResponseEntity<Page<DollResponseDto>> getDollList(
+            @PageableDefault(size = 10, sort = "id") Pageable pageable) {
+        return ResponseEntity.ok(dollService.findAll(pageable));
     }
 
     @GetMapping("/{id}")

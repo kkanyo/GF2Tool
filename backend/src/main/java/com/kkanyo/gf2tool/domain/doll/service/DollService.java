@@ -1,7 +1,7 @@
 package com.kkanyo.gf2tool.domain.doll.service;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,12 +27,10 @@ public class DollService {
 
     private final DollStatRepository dollStatRepository;
 
-    public List<DollResponseDto> findAll() {
-        List<Doll> dolls = dollRepository.findAll();
-
-        return dolls.stream()
-                .map(DollResponseDto::fromEntity)
-                .toList();
+    // List 대신 Page 타입을 반환하여 페이징 정보(전체 페이지 수 등)를 함께 전달
+    public Page<DollResponseDto> findAll(@NonNull Pageable pageable) {
+        return dollRepository.findAll(pageable)
+                .map(DollResponseDto::fromEntity);
     }
 
     public DollStatResponseDto getDollDetail(@NonNull Long id) {
