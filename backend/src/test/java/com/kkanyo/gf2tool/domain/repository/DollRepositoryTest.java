@@ -14,7 +14,6 @@ import com.kkanyo.gf2tool.domain.doll.repository.DollRepository;
 
 @DataJpaTest
 @ActiveProfiles("test")
-
 public class DollRepositoryTest {
 
     @Autowired
@@ -42,6 +41,7 @@ public class DollRepositoryTest {
                 .rare(5)
                 .weaponType(1)
                 .job(1)
+                .squad(1)
                 .dollStat(stat)
                 .build();
 

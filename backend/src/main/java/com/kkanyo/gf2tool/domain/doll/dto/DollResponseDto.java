@@ -1,6 +1,7 @@
 package com.kkanyo.gf2tool.domain.doll.dto;
 
 import com.kkanyo.gf2tool.domain.doll.entity.Doll;
+import com.querydsl.core.annotations.QueryProjection;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,16 @@ public class DollResponseDto {
     private Integer weaponType;
     private Integer job;
     private Integer squad;
+
+    @QueryProjection
+    public DollResponseDto(String name, Integer attribute2, Integer rare, Integer weaponType,
+            Integer job) {
+        this.name = name;
+        this.attribute2 = attribute2;
+        this.rare = rare;
+        this.weaponType = weaponType;
+        this.job = job;
+    }
 
     public static DollResponseDto fromEntity(Doll doll) {
         return DollResponseDto.builder()
