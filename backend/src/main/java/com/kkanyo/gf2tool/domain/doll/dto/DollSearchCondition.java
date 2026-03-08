@@ -10,7 +10,7 @@ import lombok.Setter;
 public class DollSearchCondition {
 
     private String name;
-    private Integer attribute2; // 리몰딩 속성
+    private Integer attribute;
     private Integer rare;
     private Integer weaponType;
     private Integer job;

@@ -30,14 +30,16 @@ public class DollRepositoryTest {
                 .criticalRate(20)
                 .criticalDamage(120)
                 .mobility(6)
+                .attackBonus(10)
+                .defenseBonus(0)
+                .healthBonus(0)
                 .weakness1(1)
                 .weakness2(2)
                 .build();
 
         Doll doll = Doll.builder()
                 .name("Groza")
-                .attribute1(1)
-                .attribute2(2)
+                .attribute(1)
                 .rare(5)
                 .weaponType(1)
                 .job(1)

@@ -26,14 +26,14 @@ public class DollRepositoryImpl implements DollRepositoryCustom {
         List<DollResponseDto> content = queryFactory
                 .select(new QDollResponseDto(
                         doll.name,
-                        doll.attribute2,
+                        doll.attribute,
                         doll.rare,
                         doll.weaponType,
                         doll.job))
                 .from(doll)
                 .where(
                         nameContains(condition.getName()),
-                        attribute2Eq(condition.getAttribute2()),
+                        attributeEq(condition.getAttribute()),
                         rareEq(condition.getRare()),
                         weaponTypeEq(condition.getWeaponType()),
                         jobEq(condition.getJob()))
@@ -45,7 +45,7 @@ public class DollRepositoryImpl implements DollRepositoryCustom {
                 .select(doll.count())
                 .where(
                         nameContains(condition.getName()),
-                        attribute2Eq(condition.getAttribute2()),
+                        attributeEq(condition.getAttribute()),
                         rareEq(condition.getRare()),
                         weaponTypeEq(condition.getWeaponType()),
                         jobEq(condition.getJob()))
@@ -59,8 +59,8 @@ public class DollRepositoryImpl implements DollRepositoryCustom {
         return name != null ? doll.name.containsIgnoreCase(name) : null;
     }
 
-    public BooleanExpression attribute2Eq(Integer attribute2) {
-        return attribute2 != null ? doll.attribute2.eq(attribute2) : null;
+    public BooleanExpression attributeEq(Integer attribute) {
+        return attribute != null ? doll.attribute.eq(attribute) : null;
     }
 
     public BooleanExpression rareEq(Integer rare) {

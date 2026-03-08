@@ -44,6 +44,15 @@ public class DollStat {
     private Integer mobility;
 
     @Column(nullable = false)
+    private Integer attackBonus;
+
+    @Column(nullable = false)
+    private Integer defenseBonus;
+
+    @Column(nullable = false)
+    private Integer healthBonus;
+
+    @Column(nullable = false)
     private Integer weakness1;
 
     @Column(nullable = false)

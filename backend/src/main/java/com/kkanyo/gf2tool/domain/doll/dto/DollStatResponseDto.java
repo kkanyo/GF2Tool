@@ -22,6 +22,9 @@ public class DollStatResponseDto {
     private Integer criticalRate;
     private Integer criticalDamage;
     private Integer mobility;
+    private Integer attackBonus;
+    private Integer defenseBonus;
+    private Integer healthBonus;
     private Integer weakness1;
     private Integer weakness2;
 
@@ -35,6 +38,9 @@ public class DollStatResponseDto {
                 .criticalRate(dollStat.getCriticalRate())
                 .criticalDamage(dollStat.getCriticalDamage())
                 .mobility(dollStat.getMobility())
+                .attackBonus(dollStat.getAttackBonus())
+                .defenseBonus(dollStat.getDefenseBonus())
+                .healthBonus(dollStat.getHealthBonus())
                 .weakness1(dollStat.getWeakness1())
                 .weakness2(dollStat.getWeakness2())
                 .build();

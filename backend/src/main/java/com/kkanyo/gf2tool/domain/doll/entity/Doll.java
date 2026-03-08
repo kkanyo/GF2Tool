@@ -28,17 +28,14 @@ public class Doll {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT
     private Long id;
 
-    // @Column(nullable = false)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
     private Integer rare;
 
     @Column(nullable = false)
-    private Integer attribute1; // 탄종
-
-    @Column(nullable = false)
-    private Integer attribute2; // 리몰딩 속성
+    private Integer attribute; // 리몰딩 속성
 
     @Column(nullable = false)
     private Integer weaponType;

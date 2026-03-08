@@ -18,8 +18,11 @@ import com.kkanyo.gf2tool.domain.doll.dto.DollStatResponseDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollWithStatSaveRequestDto;
 import com.kkanyo.gf2tool.domain.doll.service.DollService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 
+@Tag(name = "Doll", description = "인형 관련 API")
 @RestController
 @RequestMapping("/api/v1/dolls")
 @RequiredArgsConstructor
@@ -39,6 +42,7 @@ public class DollController {
         return ResponseEntity.ok(dollService.getDollDetail(id));
     }
 
+    @Operation(summary = "인형 등록", description = "새로운 인형 정보를 DB에 저장합니다.")
     @PostMapping
     public ResponseEntity<DollSaveResponseDto> createDoll(@RequestBody DollWithStatSaveRequestDto request) {
 
