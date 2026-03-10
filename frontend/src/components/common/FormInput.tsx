@@ -6,13 +6,9 @@ interface NumberFieldProps {
 
 function NumberField({ label, value, onChange }: NumberFieldProps) {
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div style={{ marginBottom: '10px' }}>
       <label>{label}: </label>
-      <input
-        type="number"
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-      />
+      <input type="number" value={value} onChange={(e) => onChange(Number(e.target.value))} />
     </div>
   );
 }
@@ -25,13 +21,9 @@ interface TextFieldProps {
 
 function TextField({ label, value, onChange }: TextFieldProps) {
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div style={{ marginBottom: '10px' }}>
       <label>{label}: </label>
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-      />
+      <input type="text" value={value} onChange={(e) => onChange(e.target.value)} />
     </div>
   );
 }

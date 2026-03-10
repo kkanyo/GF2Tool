@@ -5,14 +5,9 @@ interface SelectFieldProps<T extends string> {
   onChange: (value: T) => void;
 }
 
-function SelectField<T extends string>({
-  label,
-  value,
-  options,
-  onChange,
-}: SelectFieldProps<T>) {
+function SelectField<T extends string>({ label, value, options, onChange }: SelectFieldProps<T>) {
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div style={{ marginBottom: '10px' }}>
       <label>{label}: </label>
       <select value={value} onChange={(e) => onChange(e.target.value as T)}>
         {options.map((option) => (

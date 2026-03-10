@@ -1,2 +1,2 @@
-export * from "./FormInput";
-export * from "./FormSelect";
+export { NumberField, TextField } from './FormInput';
+export { SelectField } from './FormSelect';

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import {
   BulletType,
   DollApi,
@@ -10,19 +10,15 @@ import {
   type DollSaveRequestDto,
   type DollStatSaveRequestDto,
   type DollWithStatSaveRequestDto,
-} from "../../api/generated";
-import {
-  NumberField,
-  SelectField,
-  TextField,
-} from "../../components/common/Index";
+} from '../../api/generated';
+import { NumberField, SelectField, TextField } from '../../components/common/Index';
 
 function DollRegisterPage() {
   const api = new DollApi();
 
   // 초기값을 명시적으로 설정하면 `undefined` 접근 에러를 방지
   const [doll, setDoll] = useState<DollSaveRequestDto>({
-    name: "",
+    name: '',
     attribute: PhaseAttribute.None,
     rare: DollRare.Standard,
     weaponType: WeaponType.Hg,
@@ -49,21 +45,17 @@ function DollRegisterPage() {
     try {
       const requestDto: DollWithStatSaveRequestDto = { doll, dollStat };
       await api.createDoll(requestDto);
-      alert("Doll data submitted successfully!");
+      alert('Doll data submitted successfully!');
     } catch (error) {
       console.error(error);
-      alert("Failed to submit doll data.");
+      alert('Failed to submit doll data.');
     }
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: '20px' }}>
       <h1>인형 정보 등록</h1>
-      <TextField
-        label="이름"
-        value={doll.name}
-        onChange={(name) => setDoll({ ...doll, name })}
-      />
+      <TextField label="이름" value={doll.name} onChange={(name) => setDoll({ ...doll, name })} />
 
       <SelectField
         label="속성"
@@ -134,9 +126,7 @@ function DollRegisterPage() {
       <NumberField
         label="치명타 피해"
         value={dollStat.criticalDamage}
-        onChange={(criticalDamage) =>
-          setDollStat({ ...dollStat, criticalDamage })
-        }
+        onChange={(criticalDamage) => setDollStat({ ...dollStat, criticalDamage })}
       />
 
       <NumberField
