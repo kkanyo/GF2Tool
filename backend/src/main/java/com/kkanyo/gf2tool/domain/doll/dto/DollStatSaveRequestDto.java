@@ -47,7 +47,7 @@ public class DollStatSaveRequestDto {
                 .criticalRate(this.criticalRate)
                 .criticalDamage(this.criticalDamage)
                 .mobility(this.mobility)
-                .attackBonus(this.attackBonus)  
+                .attackBonus(this.attackBonus)
                 .defenseBonus(this.defenseBonus)
                 .healthBonus(this.healthBonus)
                 .weakness1(this.weakness1.getValue())

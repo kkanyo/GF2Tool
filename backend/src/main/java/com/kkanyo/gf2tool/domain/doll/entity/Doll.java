@@ -14,11 +14,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // 외부에서 빈 객체 생성 방지
 @AllArgsConstructor
 @Builder
@@ -51,4 +49,8 @@ public class Doll {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "doll_stat_id")
     private DollStat dollStat;
+
+    public void setDollStat(DollStat dollStat) {
+        this.dollStat = dollStat;
+    }
 }

@@ -20,6 +20,7 @@ import com.kkanyo.gf2tool.domain.doll.service.DollService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @Tag(name = "Doll", description = "인형 관련 API")
@@ -36,15 +37,15 @@ public class DollController {
         return ResponseEntity.ok(dollService.findAll(pageable));
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<DollStatResponseDto> getDollDetail(@PathVariable Long id) {
+    @GetMapping("/{id}/stat")
+    public ResponseEntity<DollStatResponseDto> getDollStat(@PathVariable Long id) {
 
-        return ResponseEntity.ok(dollService.getDollDetail(id));
+        return ResponseEntity.ok(dollService.getDollStatByDollId(id));
     }
 
     @Operation(summary = "인형 등록", description = "새로운 인형 정보를 DB에 저장합니다.")
     @PostMapping
-    public ResponseEntity<DollSaveResponseDto> createDoll(@RequestBody DollWithStatSaveRequestDto request) {
+    public ResponseEntity<DollSaveResponseDto> createDoll(@Valid @RequestBody DollWithStatSaveRequestDto request) {
 
         DollSaveResponseDto response = dollService.save(request.getDoll(), request.getDollStat());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
