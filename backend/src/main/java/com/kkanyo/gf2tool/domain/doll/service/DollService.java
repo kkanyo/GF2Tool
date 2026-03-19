@@ -12,6 +12,8 @@ import com.kkanyo.gf2tool.domain.doll.dto.DollStatResponseDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollStatSaveRequestDto;
 import com.kkanyo.gf2tool.domain.doll.entity.Doll;
 import com.kkanyo.gf2tool.domain.doll.entity.DollStat;
+import com.kkanyo.gf2tool.domain.doll.exception.DollNotFoundException;
+import com.kkanyo.gf2tool.domain.doll.exception.DollStatNotFoundException;
 import com.kkanyo.gf2tool.domain.doll.repository.DollRepository;
 
 import lombok.NonNull;
@@ -32,12 +34,11 @@ public class DollService {
 
     public DollStatResponseDto getDollStatByDollId(@NonNull Long id) {
         Doll doll = dollRepository.findById(id)
-                .orElseThrow(
-                        () -> new IllegalArgumentException(String.format("[ERROR] Not Exist Doll Stat [id:%d]", id)));
+                .orElseThrow(() -> new DollNotFoundException(id));
 
         DollStat dollStat = doll.getDollStat();
         if (dollStat == null) {
-            // TODOerror handling
+            throw new DollStatNotFoundException(id);
         }
 
         return DollStatResponseDto.fromEntity(dollStat);
