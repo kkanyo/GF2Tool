@@ -7,6 +7,7 @@ import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
 import com.kkanyo.gf2tool.domain.doll.model.Squad;
 import com.kkanyo.gf2tool.domain.weapon.model.WeaponType;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -19,7 +20,7 @@ import lombok.NoArgsConstructor;
 // 등록 시에만 필요한 유효성 검사(@NotBlank 등)를 넣기 위함입니다.
 public class DollSaveRequestDto {
 
-    @NotNull
+    @NotBlank
     private String name;
     @NotNull
     private PhaseAttribute attribute;
@@ -43,3 +44,4 @@ public class DollSaveRequestDto {
                 .build();
     }
 }
+    

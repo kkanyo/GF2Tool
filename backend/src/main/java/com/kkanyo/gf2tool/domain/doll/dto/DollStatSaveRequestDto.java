@@ -4,6 +4,7 @@ import com.kkanyo.gf2tool.domain.doll.entity.DollStat;
 import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
 import com.kkanyo.gf2tool.domain.weapon.model.BulletType;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -14,24 +15,34 @@ import lombok.NoArgsConstructor;
 public class DollStatSaveRequestDto {
 
     @NotNull
+    @Min(0)
     private Integer attack;
     @NotNull
+    @Min(0)
     private Integer defense;
     @NotNull
+    @Min(1)
     private Integer health;
     @NotNull
+    @Min(0)
     private Integer stability;
     @NotNull
+    @Min(0)
     private Integer criticalRate;
     @NotNull
+    @Min(0)
     private Integer criticalDamage;
     @NotNull
+    @Min(0)
     private Integer mobility;
     @NotNull
+    @Min(0)
     private Integer attackBonus;
     @NotNull
+    @Min(0)
     private Integer defenseBonus;
     @NotNull
+    @Min(0)
     private Integer healthBonus;
     @NotNull
     private BulletType weakness1;
