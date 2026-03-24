@@ -1,9 +1,10 @@
 package com.kkanyo.gf2tool.domain.doll.controller;
 
+import java.net.URI;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,7 +49,8 @@ public class DollController {
     public ResponseEntity<DollSaveResponseDto> createDoll(@Valid @RequestBody DollWithStatSaveRequestDto request) {
 
         DollSaveResponseDto response = dollService.save(request.getDoll(), request.getDollStat());
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+        URI location = URI.create(String.format("/api/v1/dolls/%d", response.getId()));
+        return ResponseEntity.created(location).body(response);
     }
 
 }

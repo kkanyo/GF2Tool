@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class DollResponseDto {
 
+    private Long id;
     private String name;
     private Integer attribute;
     private Integer rare;
@@ -20,8 +21,9 @@ public class DollResponseDto {
     private Integer job;
 
     @QueryProjection
-    public DollResponseDto(String name, Integer attribute, Integer rare, Integer weaponType,
+    public DollResponseDto(Long id, String name, Integer attribute, Integer rare, Integer weaponType,
             Integer job) {
+        this.id = id;
         this.name = name;
         this.attribute = attribute;
         this.rare = rare;
