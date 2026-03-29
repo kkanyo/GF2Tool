@@ -34,11 +34,11 @@ public class DollService {
 
     public DollStatResponseDto getDollStatByDollId(@NonNull Long id) {
         Doll doll = dollRepository.findById(id)
-                .orElseThrow(() -> new DollNotFoundException(id));
+                .orElseThrow(DollNotFoundException::new);
 
         DollStat dollStat = doll.getDollStat();
         if (dollStat == null) {
-            throw new DollStatNotFoundException(id);
+            throw new DollStatNotFoundException();
         }
 
         return DollStatResponseDto.fromEntity(dollStat);

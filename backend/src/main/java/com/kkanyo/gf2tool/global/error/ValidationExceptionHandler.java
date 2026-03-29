@@ -2,6 +2,7 @@ package com.kkanyo.gf2tool.global.error;
 
 import java.util.stream.Collectors;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,11 +33,10 @@ public class ValidationExceptionHandler {
         }
 
         ErrorResponseDto body = errorResponseFactory.create(
-                400,
+                HttpStatus.BAD_REQUEST,
                 message,
                 "VALIDATION_ERROR",
                 request);
         return ResponseEntity.badRequest().body(body);
     }
 }
-

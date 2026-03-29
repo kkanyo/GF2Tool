@@ -1,14 +1,22 @@
 package com.kkanyo.gf2tool.domain.doll.exception;
 
+import org.springframework.http.HttpStatus;
+
+import com.kkanyo.gf2tool.global.error.BusinessException;
+
 import lombok.Getter;
 
 @Getter
-public class DollNotFoundException extends RuntimeException {
+public class DollNotFoundException extends BusinessException {
 
-    private final Long dollId;
+    @Override
+    public HttpStatus getStatus() {
+        return HttpStatus.NOT_FOUND;
+    }
 
-    public DollNotFoundException(Long dollId) {
-        super(String.format("Doll not found. [id:%d]", dollId));
-        this.dollId = dollId;
+    @Override
+    public String getErrorCode() {
+        return "DOLL_NOT_FOUND";
+
     }
 }

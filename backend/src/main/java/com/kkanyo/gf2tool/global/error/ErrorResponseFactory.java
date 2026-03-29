@@ -2,6 +2,7 @@ package com.kkanyo.gf2tool.global.error;
 
 import java.time.Instant;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
@@ -11,7 +12,7 @@ import com.kkanyo.gf2tool.global.error.dto.ErrorResponseDto;
 public class ErrorResponseFactory {
 
     public ErrorResponseDto create(
-            int status,
+            HttpStatus status,
             String message,
             String errorCode,
             ServletWebRequest request) {
@@ -19,4 +20,3 @@ public class ErrorResponseFactory {
         return new ErrorResponseDto(status, message, errorCode, Instant.now(), path);
     }
 }
-
