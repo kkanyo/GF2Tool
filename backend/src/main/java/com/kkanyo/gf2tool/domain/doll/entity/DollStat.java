@@ -1,7 +1,12 @@
 package com.kkanyo.gf2tool.domain.doll.entity;
 
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.weapon.model.BulletType;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -52,9 +57,11 @@ public class DollStat {
     @Column(nullable = false)
     private Integer healthBonus;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer weakness1;
+    private BulletType weakness1;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer weakness2;
+    private PhaseAttribute weakness2;
 }

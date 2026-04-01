@@ -4,7 +4,6 @@ import static com.kkanyo.gf2tool.domain.doll.entity.QDoll.doll;
 
 import java.util.List;
 
-import com.kkanyo.gf2tool.domain.doll.dto.QDollResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +11,11 @@ import org.springframework.stereotype.Repository;
 
 import com.kkanyo.gf2tool.domain.doll.dto.DollResponseDto;
 import com.kkanyo.gf2tool.domain.doll.dto.DollSearchCondition;
+import com.kkanyo.gf2tool.domain.doll.dto.QDollResponseDto;
+import com.kkanyo.gf2tool.domain.doll.model.DollRare;
+import com.kkanyo.gf2tool.domain.doll.model.Job;
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.weapon.model.WeaponType;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 
@@ -27,6 +31,7 @@ public class DollRepositoryImpl implements DollRepositoryCustom {
     public Page<DollResponseDto> search(DollSearchCondition condition, Pageable pageable) {
         List<DollResponseDto> content = queryFactory
                 .select(new QDollResponseDto(
+                        doll.id,
                         doll.name,
                         doll.attribute,
                         doll.rare,
@@ -63,19 +68,19 @@ public class DollRepositoryImpl implements DollRepositoryCustom {
         return name != null ? doll.name.containsIgnoreCase(name) : null;
     }
 
-    public BooleanExpression attributeEq(Integer attribute) {
+    public BooleanExpression attributeEq(PhaseAttribute attribute) {
         return attribute != null ? doll.attribute.eq(attribute) : null;
     }
 
-    public BooleanExpression rareEq(Integer rare) {
+    public BooleanExpression rareEq(DollRare rare) {
         return rare != null ? doll.rare.eq(rare) : null;
     }
 
-    public BooleanExpression weaponTypeEq(Integer weaponType) {
+    public BooleanExpression weaponTypeEq(WeaponType weaponType) {
         return weaponType != null ? doll.weaponType.eq(weaponType) : null;
     }
 
-    public BooleanExpression jobEq(Integer job) {
+    public BooleanExpression jobEq(Job job) {
         return job != null ? doll.job.eq(job) : null;
     }
 }

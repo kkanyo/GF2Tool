@@ -61,8 +61,8 @@ public class DollStatSaveRequestDto {
                 .attackBonus(this.attackBonus)
                 .defenseBonus(this.defenseBonus)
                 .healthBonus(this.healthBonus)
-                .weakness1(this.weakness1.getValue())
-                .weakness2(this.weakness2.getValue())
+                .weakness1(this.weakness1)
+                .weakness2(this.weakness2)
                 .build();
     }
 }

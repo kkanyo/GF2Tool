@@ -1,8 +1,16 @@
 package com.kkanyo.gf2tool.domain.doll.entity;
 
+import com.kkanyo.gf2tool.domain.doll.model.DollRare;
+import com.kkanyo.gf2tool.domain.doll.model.Job;
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.doll.model.Squad;
+import com.kkanyo.gf2tool.domain.weapon.model.WeaponType;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,20 +37,25 @@ public class Doll {
     @Column(nullable = false)
     private String name;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer rare;
+    private DollRare rare;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer attribute; // 리몰딩 속성
+    private PhaseAttribute attribute; // 리몰딩 속성
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer weaponType;
+    private WeaponType weaponType;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer job;
+    private Job job;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Integer squad;
+    private Squad squad;
 
     // 인형 테이블과 인형 스탯 테이블은 1:1 관계
     // 인형의 상세 정보 페이지 진입 전까진 스탯 정보는 불러오지 않는다.

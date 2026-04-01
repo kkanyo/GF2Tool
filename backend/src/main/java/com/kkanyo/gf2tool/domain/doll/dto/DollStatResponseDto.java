@@ -1,6 +1,8 @@
 package com.kkanyo.gf2tool.domain.doll.dto;
 
 import com.kkanyo.gf2tool.domain.doll.entity.DollStat;
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.weapon.model.BulletType;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -25,8 +27,8 @@ public class DollStatResponseDto {
     private Integer attackBonus;
     private Integer defenseBonus;
     private Integer healthBonus;
-    private Integer weakness1;
-    private Integer weakness2;
+    private BulletType weakness1;
+    private PhaseAttribute weakness2;
 
     public static DollStatResponseDto fromEntity(DollStat dollStat) {
         return DollStatResponseDto.builder()

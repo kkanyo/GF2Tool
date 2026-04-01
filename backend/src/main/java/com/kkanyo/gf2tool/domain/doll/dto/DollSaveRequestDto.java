@@ -36,12 +36,11 @@ public class DollSaveRequestDto {
     public Doll toEntity() {
         return Doll.builder()
                 .name(this.name)
-                .attribute(attribute.getValue())
-                .rare(rare.getValue())
-                .weaponType(weaponType.getValue())
-                .job(job.getValue())
-                .squad(squad.getValue())
+                .attribute(attribute)
+                .rare(rare)
+                .weaponType(weaponType)
+                .job(job)
+                .squad(squad)
                 .build();
     }
 }
-    
