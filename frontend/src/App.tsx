@@ -1,12 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { DollRegisterPage } from './pages';
+import { Navigation } from './components/layout/Navigation';
+import './i18n';
+import { DollListPage, DollRegisterPage } from './pages';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="dolls/register" element={<DollRegisterPage />} />
-      </Routes>
+      <div className="min-h-dvh bg-zinc-950 text-zinc-100">
+        <Navigation />
+        <main>
+          <Routes>
+            <Route path="/dolls/list" element={<DollListPage />} />
+            <Route path="/dolls/register" element={<DollRegisterPage />} />
+          </Routes>
+        </main>
+      </div>
     </BrowserRouter>
   );
 }

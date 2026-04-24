@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "GF2 Tool"
+  },
+  "navigation": {
+    "dollList": "Doll List",
+    "dollRegister": "Doll Register"
+  },
+  "dollList": {
+    "title": "Doll List",
+    "description": "Search by name/attribute/rarity/weapon/job.",
+    "searchConditions": "Search Conditions",
+    "nameSearch": "Name Search",
+    "namePlaceholder": "e.g. Groza",
+    "all": "All",
+    "pageSize": "Page Size",
+    "attribute": "Attribute",
+    "rare": "Rare",
+    "weaponType": "Weapon Type",
+    "job": "Job",
+    "attack": "Attack",
+    "defense": "Defense",
+    "health": "Health",
+    "stability": "Stability",
+    "critical": "Critical",
+    "mobility": "Mobility",
+    "attackBonus": "Attack Bonus",
+    "defenseBonus": "Defense Bonus",
+    "healthBonus": "Health Bonus",
+    "reset": "Reset",
+    "loading": "Loading…",
+    "prev": "Prev",
+    "next": "Next",
+    "page": "Page",
+    "items": "items"
+  },
+  "dollRegister": {
+    "title": "Doll Information Registration",
+    "name": "Name",
+    "attribute": "Attribute",
+    "rare": "Rare",
+    "weaponType": "Weapon Type",
+    "job": "Job",
+    "squad": "Squad",
+    "stats": "Stat Information",
+    "attack": "Attack",
+    "defense": "Defense",
+    "health": "Health",
+    "stability": "Stability",
+    "critical": "Critical",
+    "criticalDamage": "Critical Damage",
+    "mobility": "Mobility",
+    "attackBonus": "Attack Bonus",
+    "defenseBonus": "Defense Bonus",
+    "healthBonus": "Health Bonus",
+    "weakness1": "Bullet Weakness",
+    "weakness2": "Phase Attribute Weakness",
+    "register": "Register",
+    "success": "Doll data submitted successfully!",
+    "error": "Failed to submit doll data."
+  },
+  "enums": {
+    "attributes": {
+      "NONE": "None",
+      "BURN": "Burn",
+      "ELECTRIC": "Electric",
+      "HYDRO": "Hydro",
+      "CORROSION": "Corrosion",
+      "FREEZE": "Freeze",
+      "PHYSICAL": "Physical"
+    },
+    "rares": {
+      "STANDARD": "Standard",
+      "ELITE": "Elite"
+    },
+    "weapons": {
+      "HG": "HG",
+      "SMG": "SMG",
+      "RF": "RF",
+      "AR": "AR",
+      "MG": "MG",
+      "SG": "SG",
+      "BLD": "BLD"
+    },
+    "jobs": {
+      "SENTINEL": "Sentinel",
+      "VANGUARD": "Vanguard",
+      "SUPPORT": "Support",
+      "BULWARK": "Bulwark"
+    }
+  }
+}

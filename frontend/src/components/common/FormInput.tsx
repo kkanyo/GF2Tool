@@ -15,7 +15,7 @@ function NumberField({ label, value, onChange }: NumberFieldProps) {
 
 interface TextFieldProps {
   label: string;
-  value: string;
+  value: string | undefined;
   onChange: (value: string) => void;
 }
 

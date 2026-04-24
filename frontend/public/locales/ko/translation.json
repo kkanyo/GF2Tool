@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "GF2 Tool"
+  },
+  "navigation": {
+    "dollList": "인형 목록",
+    "dollRegister": "인형 등록"
+  },
+  "dollList": {
+    "title": "인형 목록",
+    "description": "이름/속성/희귀도/무기/직업으로 검색합니다.",
+    "searchConditions": "검색 조건",
+    "nameSearch": "이름 검색",
+    "namePlaceholder": "예: Groza",
+    "all": "전체",
+    "pageSize": "페이지 크기",
+    "attribute": "속성",
+    "rare": "희귀도",
+    "weaponType": "무기 타입",
+    "job": "직업",
+    "name": "이름",
+    "attack": "공격",
+    "defense": "방어",
+    "health": "체력",
+    "stability": "안정 지수",
+    "critical": "치명타",
+    "mobility": "이동력",
+    "attackBonus": "공격 보너스",
+    "defenseBonus": "방어 보너스",
+    "healthBonus": "체력 보너스",
+    "reset": "리셋",
+    "loading": "Loading…",
+    "prev": "Prev",
+    "next": "Next",
+    "page": "Page",
+    "items": "items"
+  },
+  "dollRegister": {
+    "title": "인형 정보 등록",
+    "name": "이름",
+    "attribute": "속성",
+    "rare": "희귀도",
+    "weaponType": "무기 타입",
+    "job": "직업",
+    "squad": "소대",
+    "stats": "스탯 정보",
+    "attack": "공격",
+    "defense": "방어",
+    "health": "체력",
+    "stability": "안정 지수",
+    "critical": "치명타",
+    "criticalDamage": "치명타 데미지",
+    "mobility": "이동력",
+    "attackBonus": "공격 보너스",
+    "defenseBonus": "방어 보너스",
+    "healthBonus": "체력 보너스",
+    "weakness1": "탄종 약점",
+    "weakness2": "위상 속성 약점",
+    "register": "등록하기",
+    "success": "Doll data submitted successfully!",
+    "error": "Failed to submit doll data."
+  },
+  "enums": {
+    "attributes": {
+      "NONE": "없음",
+      "BURN": "화상",
+      "ELECTRIC": "전기",
+      "HYDRO": "물",
+      "CORROSION": "부식",
+      "FREEZE": "얼음",
+      "PHYSICAL": "물리"
+    },
+    "rares": {
+      "STANDARD": "SR",
+      "ELITE": "SSR"
+    },
+    "weapons": {
+      "HG": "HG",
+      "SMG": "SMG",
+      "RF": "RF",
+      "AR": "AR",
+      "MG": "MG",
+      "SG": "SG",
+      "BLD": "BLD"
+    },
+    "jobs": {
+      "SENTINEL": "센티넬",
+      "VANGUARD": "뱅가드",
+      "SUPPORT": "서포트",
+      "BULWARK": "불워크"
+    }
+  }
+}
