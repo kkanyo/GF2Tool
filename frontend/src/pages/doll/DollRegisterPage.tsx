@@ -58,103 +58,108 @@ function DollRegisterPage() {
     <div style={{ padding: '20px' }}>
       <h1>{t('dollRegister.title')}</h1>
       <TextField
-        label={t('dollRegister.name')}
+        label={t('doll.name')}
         value={doll.name}
         onChange={(name) => setDoll({ ...doll, name })}
       />
 
       <SelectField
-        label={t('dollRegister.attribute')}
+        label={t('doll.attribute')}
         value={doll.attribute}
         options={Object.values(PhaseAttribute)}
+        textPrefix="enums.attributes"
         onChange={(attribute) => setDoll({ ...doll, attribute })}
       />
 
       <SelectField
-        label={t('dollRegister.rare')}
+        label={t('doll.rare')}
         value={doll.rare}
         options={Object.values(DollRare)}
+        textPrefix="enums.rares"
         onChange={(rare) => setDoll({ ...doll, rare })}
       />
 
       <SelectField
-        label={t('dollRegister.weaponType')}
+        label={t('doll.weaponType')}
         value={doll.weaponType}
         options={Object.values(WeaponType)}
+        textPrefix="enums.weaponTypes"
         onChange={(weaponType) => setDoll({ ...doll, weaponType })}
       />
 
       <SelectField
-        label={t('dollRegister.job')}
+        label={t('doll.job')}
         value={doll.job}
         options={Object.values(Job)}
+        textPrefix="enums.jobs"
         onChange={(job) => setDoll({ ...doll, job })}
       />
 
       <SelectField
-        label={t('dollRegister.squad')}
+        label={t('doll.squad')}
         value={doll.squad}
         options={Object.values(Squad)}
+        textPrefix="enums.squads"
         onChange={(squad) => setDoll({ ...doll, squad })}
       />
 
-      <h2>{t('dollRegister.stats')}</h2>
+      <h2>{t('doll.stats')}</h2>
       <NumberField
-        label={t('dollRegister.attack')}
+        label={t('doll.attack')}
         value={dollStat.attack}
         onChange={(attack) => setDollStat({ ...dollStat, attack })}
       />
 
       <NumberField
-        label={t('dollRegister.defense')}
+        label={t('doll.defense')}
         value={dollStat.defense}
         onChange={(defense) => setDollStat({ ...dollStat, defense })}
       />
 
       <NumberField
-        label={t('dollRegister.health')}
+        label={t('doll.health')}
         value={dollStat.health}
         onChange={(health) => setDollStat({ ...dollStat, health })}
       />
 
       <NumberField
-        label={t('dollRegister.stability')}
+        label={t('doll.stability')}
         value={dollStat.stability}
         onChange={(stability) => setDollStat({ ...dollStat, stability })}
       />
 
       <NumberField
-        label={t('dollRegister.critical')}
+        label={t('doll.critical')}
         value={dollStat.criticalRate}
         onChange={(criticalRate) => setDollStat({ ...dollStat, criticalRate })}
       />
 
       <NumberField
-        label={t('dollRegister.criticalDamage')}
+        label={t('doll.criticalDamage')}
         value={dollStat.criticalDamage}
         onChange={(criticalDamage) => setDollStat({ ...dollStat, criticalDamage })}
       />
 
       <NumberField
-        label={t('dollRegister.mobility')}
+        label={t('doll.mobility')}
         value={dollStat.mobility}
         onChange={(mobility) => setDollStat({ ...dollStat, mobility })}
       />
 
       <NumberField
-        label={t('dollRegister.attackBonus')}
+        label={t('doll.attackBonus')}
         value={dollStat.attackBonus}
         onChange={(attackBonus) => setDollStat({ ...dollStat, attackBonus })}
       />
 
       <NumberField
-        label={t('dollRegister.defenseBonus')}
+        label={t('doll.defenseBonus')}
         value={dollStat.defenseBonus}
         onChange={(defenseBonus) => setDollStat({ ...dollStat, defenseBonus })}
       />
 
       <NumberField
-        label={t('dollRegister.healthBonus')}
+        label={t('doll.healthBonus')}
         value={dollStat.healthBonus}
         onChange={(healthBonus) => setDollStat({ ...dollStat, healthBonus })}
       />
@@ -163,6 +168,7 @@ function DollRegisterPage() {
         label={t('dollRegister.weakness1')}
         value={dollStat.weakness1}
         options={Object.values(BulletType)}
+        textPrefix="enums.bulletTypes"
         onChange={(weakness1) => setDollStat({ ...dollStat, weakness1 })}
       />
 
@@ -170,14 +176,11 @@ function DollRegisterPage() {
         label={t('dollRegister.weakness2')}
         value={dollStat.weakness2}
         options={Object.values(PhaseAttribute)}
+        textPrefix="enums.attributes"
         onChange={(weakness2) => setDollStat({ ...dollStat, weakness2 })}
       />
 
       <button onClick={handleSubmit}>{t('dollRegister.register')}</button>
-
-      {/* 간단한 상태 확인용 JSON 디버그 */}
-      <h2>디버그</h2>
-      <pre>{JSON.stringify({ doll, dollStat }, null, 2)}</pre>
     </div>
   );
 }

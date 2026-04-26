@@ -20,7 +20,7 @@ export function getDollRareLabel(t: TFunction, value: DollRareType): string {
 }
 
 export function getWeaponTypeLabel(t: TFunction, value: WeaponType): string {
-  return t(`enums.weapons.${value}`);
+  return t(`enums.weaponTypes.${value}`);
 }
 
 export function getJobLabel(t: TFunction, value: Job): string {

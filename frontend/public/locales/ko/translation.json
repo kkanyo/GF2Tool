@@ -6,37 +6,7 @@
     "dollList": "인형 목록",
     "dollRegister": "인형 등록"
   },
-  "dollList": {
-    "title": "인형 목록",
-    "description": "이름/속성/희귀도/무기/직업으로 검색합니다.",
-    "searchConditions": "검색 조건",
-    "nameSearch": "이름 검색",
-    "namePlaceholder": "예: Groza",
-    "all": "전체",
-    "pageSize": "페이지 크기",
-    "attribute": "속성",
-    "rare": "희귀도",
-    "weaponType": "무기 타입",
-    "job": "직업",
-    "name": "이름",
-    "attack": "공격",
-    "defense": "방어",
-    "health": "체력",
-    "stability": "안정 지수",
-    "critical": "치명타",
-    "mobility": "이동력",
-    "attackBonus": "공격 보너스",
-    "defenseBonus": "방어 보너스",
-    "healthBonus": "체력 보너스",
-    "reset": "리셋",
-    "loading": "Loading…",
-    "prev": "Prev",
-    "next": "Next",
-    "page": "Page",
-    "items": "items"
-  },
-  "dollRegister": {
-    "title": "인형 정보 등록",
+  "doll": {
     "name": "이름",
     "attribute": "속성",
     "rare": "희귀도",
@@ -54,27 +24,46 @@
     "attackBonus": "공격 보너스",
     "defenseBonus": "방어 보너스",
     "healthBonus": "체력 보너스",
-    "weakness1": "탄종 약점",
-    "weakness2": "위상 속성 약점",
+    "weakness": "약점"
+  },
+  "dollList": {
+    "title": "인형 목록",
+    "description": "이름/속성/희귀도/무기/직업으로 검색합니다.",
+    "searchConditions": "검색 조건",
+    "nameSearch": "이름 검색",
+    "namePlaceholder": "예: Groza",
+    "all": "전체",
+    "pageSize": "페이지 크기",
+    "reset": "리셋",
+    "loading": "Loading…",
+    "prev": "이전",
+    "next": "다음",
+    "page": "페이지",
+    "items": "항목"
+  },
+  "dollRegister": {
+    "title": "인형 정보 등록",
     "register": "등록하기",
+    "weakness1": "탄종 약점",
+    "weakness2": "속성 약점",
     "success": "Doll data submitted successfully!",
     "error": "Failed to submit doll data."
   },
   "enums": {
     "attributes": {
       "NONE": "없음",
-      "BURN": "화상",
-      "ELECTRIC": "전기",
-      "HYDRO": "물",
-      "CORROSION": "부식",
-      "FREEZE": "얼음",
+      "BURN": "연소",
+      "ELECTRIC": "전도",
+      "HYDRO": "탁류",
+      "CORROSION": "산성",
+      "FREEZE": "빙결",
       "PHYSICAL": "물리"
     },
     "rares": {
       "STANDARD": "SR",
       "ELITE": "SSR"
     },
-    "weapons": {
+    "weaponTypes": {
       "HG": "HG",
       "SMG": "SMG",
       "RF": "RF",
@@ -83,11 +72,36 @@
       "SG": "SG",
       "BLD": "BLD"
     },
+    "bulletTypes": {
+      "LIGHT_AMMO": "경량탄",
+      "MEDIUM_AMMO": "표준탄",
+      "HEAVY_AMMO": "중량탄",
+      "SHOTGUN_AMMO": "산탄",
+      "MELEE": "근접"
+    },
     "jobs": {
       "SENTINEL": "센티넬",
       "VANGUARD": "뱅가드",
       "SUPPORT": "서포트",
       "BULWARK": "불워크"
+    },
+    "squads": {
+      "NONE": "없음",
+      "GROZA_SQUAD": "그로자 소대",
+      "ELMO_INTEGRATED_SQUAD": "엘모호 통합 제대",
+      "ZUCCHERO_CAFE": "카페 주케로",
+      "FROSTFALL_SQUAD": "상강 소대",
+      "POL03_SECURITY_DIVISIONS": "POL-03 치안관리부서",
+      "DOLL_COMMUNITY": "인형 공동체",
+      "MONSOON": "계절풍 악단",
+      "HIDE404": "H.I.D.E. 404",
+      "HIDE404_TEAM1": "H.I.D.E. 404 1팀",
+      "HIDE404_TEAM2": "H.I.D.E. 404 2팀",
+      "SPARK_SQUAD": "스파크 소대",
+      "TEAM_AR": "AR팀",
+      "REBELLION": "리벨리온 소대",
+      "LAB16": "16LAB",
+      "STATE_SECURITY_AGENCY": "국가안전국"
     }
   }
 }

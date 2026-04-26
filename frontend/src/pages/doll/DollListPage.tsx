@@ -258,7 +258,7 @@ function DollListPage() {
               </label>
 
               <label className="flex flex-col gap-1">
-                <span className="text-xs font-medium text-zinc-400">{t('dollList.attribute')}</span>
+                <span className="text-xs font-medium text-zinc-400">{t('doll.attribute')}</span>
                 <select
                   className="h-10 rounded-lg border border-zinc-800 bg-zinc-900 px-3 text-sm text-zinc-100 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none"
                   value={attributeFilter}
@@ -277,7 +277,7 @@ function DollListPage() {
               </label>
 
               <label className="flex flex-col gap-1">
-                <span className="text-xs font-medium text-zinc-400">{t('dollList.rare')}</span>
+                <span className="text-xs font-medium text-zinc-400">{t('doll.rare')}</span>
                 <select
                   className="h-10 rounded-lg border border-zinc-800 bg-zinc-900 px-3 text-sm text-zinc-100 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none"
                   value={rareFilter}
@@ -296,9 +296,7 @@ function DollListPage() {
               </label>
 
               <label className="flex flex-col gap-1">
-                <span className="text-xs font-medium text-zinc-400">
-                  {t('dollList.weaponType')}
-                </span>
+                <span className="text-xs font-medium text-zinc-400">{t('doll.weaponType')}</span>
                 <select
                   className="h-10 rounded-lg border border-zinc-800 bg-zinc-900 px-3 text-sm text-zinc-100 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none"
                   value={weaponTypeFilter}
@@ -317,7 +315,7 @@ function DollListPage() {
               </label>
 
               <label className="flex flex-col gap-1">
-                <span className="text-xs font-medium text-zinc-400">{t('dollList.job')}</span>
+                <span className="text-xs font-medium text-zinc-400">{t('doll.job')}</span>
                 <select
                   className="h-10 rounded-lg border border-zinc-800 bg-zinc-900 px-3 text-sm text-zinc-100 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none"
                   value={jobFilter}
@@ -400,7 +398,7 @@ function DollListPage() {
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  className="inline-flex h-9 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 px-3 text-sm font-medium text-zinc-100 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="justify-cen ter inline-flex h-9 items-center rounded-lg border border-zinc-800 bg-zinc-950 px-3 text-sm font-medium text-zinc-100 hover:bg-zinc-900 disabled:cursor-not-allowed disabled:opacity-50"
                   onClick={() => setPage((p) => Math.max(0, p - 1))}
                   disabled={!canPrev}
                 >
@@ -421,11 +419,11 @@ function DollListPage() {
               <table className="min-w-full text-left text-sm">
                 <thead className="bg-zinc-950/40 text-xs tracking-wide text-zinc-400 uppercase">
                   <tr>
-                    <th className="px-4 py-3">{t('dollList.name')}</th>
-                    <th className="px-4 py-3">{t('dollList.attribute')}</th>
-                    <th className="px-4 py-3">{t('dollList.rare')}</th>
-                    <th className="px-4 py-3">{t('dollList.weaponType')}</th>
-                    <th className="px-4 py-3">{t('dollList.job')}</th>
+                    <th className="px-4 py-3">{t('doll.name')}</th>
+                    <th className="px-4 py-3">{t('doll.attribute')}</th>
+                    <th className="px-4 py-3">{t('doll.rare')}</th>
+                    <th className="px-4 py-3">{t('doll.weaponType')}</th>
+                    <th className="px-4 py-3">{t('doll.job')}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-zinc-800">

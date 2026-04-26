@@ -6,43 +6,13 @@
     "dollList": "Doll List",
     "dollRegister": "Doll Register"
   },
-  "dollList": {
-    "title": "Doll List",
-    "description": "Search by name/attribute/rarity/weapon/job.",
-    "searchConditions": "Search Conditions",
-    "nameSearch": "Name Search",
-    "namePlaceholder": "e.g. Groza",
-    "all": "All",
-    "pageSize": "Page Size",
-    "attribute": "Attribute",
-    "rare": "Rare",
-    "weaponType": "Weapon Type",
-    "job": "Job",
-    "attack": "Attack",
-    "defense": "Defense",
-    "health": "Health",
-    "stability": "Stability",
-    "critical": "Critical",
-    "mobility": "Mobility",
-    "attackBonus": "Attack Bonus",
-    "defenseBonus": "Defense Bonus",
-    "healthBonus": "Health Bonus",
-    "reset": "Reset",
-    "loading": "Loading…",
-    "prev": "Prev",
-    "next": "Next",
-    "page": "Page",
-    "items": "items"
-  },
-  "dollRegister": {
-    "title": "Doll Information Registration",
+  "doll": {
     "name": "Name",
     "attribute": "Attribute",
     "rare": "Rare",
     "weaponType": "Weapon Type",
     "job": "Job",
     "squad": "Squad",
-    "stats": "Stat Information",
     "attack": "Attack",
     "defense": "Defense",
     "health": "Health",
@@ -53,8 +23,27 @@
     "attackBonus": "Attack Bonus",
     "defenseBonus": "Defense Bonus",
     "healthBonus": "Health Bonus",
-    "weakness1": "Bullet Weakness",
-    "weakness2": "Phase Attribute Weakness",
+    "weakness": "Weakness"
+  },
+  "dollList": {
+    "title": "Doll List",
+    "description": "Search by name/attribute/rarity/weapon/job.",
+    "searchConditions": "Search Conditions",
+    "nameSearch": "Name Search",
+    "namePlaceholder": "e.g. Groza",
+    "all": "All",
+    "pageSize": "Page Size",
+    "reset": "Reset",
+    "loading": "Loading…",
+    "prev": "Prev",
+    "next": "Next",
+    "page": "Page",
+    "items": "items"
+  },
+  "dollRegister": {
+    "title": "Doll Information Registration",
+    "weakness1": "Bullet Type Weakness",
+    "weakness2": "Attribute Weakness",
     "register": "Register",
     "success": "Doll data submitted successfully!",
     "error": "Failed to submit doll data."
@@ -70,10 +59,10 @@
       "PHYSICAL": "Physical"
     },
     "rares": {
-      "STANDARD": "Standard",
-      "ELITE": "Elite"
+      "STANDARD": "SR",
+      "ELITE": "SSR"
     },
-    "weapons": {
+    "weaponTypes": {
       "HG": "HG",
       "SMG": "SMG",
       "RF": "RF",
@@ -82,11 +71,36 @@
       "SG": "SG",
       "BLD": "BLD"
     },
+    "bulletTypes": {
+      "LIGHT_AMMO": "Light Ammo",
+      "MEDIUM_AMMO": "Medium Ammo",
+      "HEAVY_AMMO": "Heavy Ammo",
+      "SHOTGUN_AMMO": "Shotgun Ammo",
+      "MELEE": "Melee"
+    },
     "jobs": {
       "SENTINEL": "Sentinel",
       "VANGUARD": "Vanguard",
       "SUPPORT": "Support",
       "BULWARK": "Bulwark"
+    },
+    "squads": {
+      "NONE": "NONE",
+      "GROZA_SQUAD": "Groza Squad",
+      "ELMO_INTEGRATED_SQUAD": "Elmo Integrated Squad",
+      "ZUCCHERO_CAFE": "Cafe Zucchero",
+      "FROSTFALL_SQUAD": "Frostfall Squad",
+      "POL03_SECURITY_DIVISIONS": "POL-03 Security Divisions",
+      "DOLL_COMMUNITY": "Doll Community",
+      "MONSOON": "Monsoon",
+      "HIDE404": "H.I.D.E. 404",
+      "HIDE404_TEAM1": "H.I.D.E. 404 Team1",
+      "HIDE404_TEAM2": "H.I.D.E. 404 Team2",
+      "SPARK_SQUAD": "Spark Squad",
+      "TEAM_AR": "Team AR",
+      "REBELLION": "Rebelion",
+      "LAB16": "16LAB",
+      "STATE_SECURITY_AGENCY": "State Security Agency"
     }
   }
 }
