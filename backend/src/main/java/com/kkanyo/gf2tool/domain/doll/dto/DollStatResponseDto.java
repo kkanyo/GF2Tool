@@ -1,6 +1,8 @@
 package com.kkanyo.gf2tool.domain.doll.dto;
 
 import com.kkanyo.gf2tool.domain.doll.entity.DollStat;
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.weapon.model.BulletType;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -22,8 +24,11 @@ public class DollStatResponseDto {
     private Integer criticalRate;
     private Integer criticalDamage;
     private Integer mobility;
-    private Integer weakness1;
-    private Integer weakness2;
+    private Integer attackBonus;
+    private Integer defenseBonus;
+    private Integer healthBonus;
+    private BulletType weakness1;
+    private PhaseAttribute weakness2;
 
     public static DollStatResponseDto fromEntity(DollStat dollStat) {
         return DollStatResponseDto.builder()
@@ -35,6 +40,9 @@ public class DollStatResponseDto {
                 .criticalRate(dollStat.getCriticalRate())
                 .criticalDamage(dollStat.getCriticalDamage())
                 .mobility(dollStat.getMobility())
+                .attackBonus(dollStat.getAttackBonus())
+                .defenseBonus(dollStat.getDefenseBonus())
+                .healthBonus(dollStat.getHealthBonus())
                 .weakness1(dollStat.getWeakness1())
                 .weakness2(dollStat.getWeakness2())
                 .build();

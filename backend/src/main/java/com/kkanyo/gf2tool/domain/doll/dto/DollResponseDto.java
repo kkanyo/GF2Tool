@@ -1,36 +1,47 @@
 package com.kkanyo.gf2tool.domain.doll.dto;
 
 import com.kkanyo.gf2tool.domain.doll.entity.Doll;
+import com.kkanyo.gf2tool.domain.doll.model.DollRare;
+import com.kkanyo.gf2tool.domain.doll.model.Job;
+import com.kkanyo.gf2tool.domain.doll.model.PhaseAttribute;
+import com.kkanyo.gf2tool.domain.weapon.model.WeaponType;
+import com.querydsl.core.annotations.QueryProjection;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 @Builder
 public class DollResponseDto {
 
+    private Long id;
     private String name;
-    private Integer attribute1;
-    private Integer attribute2;
-    private Integer rare;
-    private Integer weaponType;
-    private Integer job;
-    private Integer squad;
+    private PhaseAttribute attribute;
+    private DollRare rare;
+    private WeaponType weaponType;
+    private Job job;
+
+    @QueryProjection
+    public DollResponseDto(Long id, String name, PhaseAttribute attribute, DollRare rare, WeaponType weaponType,
+            Job job) {
+        this.id = id;
+        this.name = name;
+        this.attribute = attribute;
+        this.rare = rare;
+        this.weaponType = weaponType;
+        this.job = job;
+    }
 
     public static DollResponseDto fromEntity(Doll doll) {
         return DollResponseDto.builder()
                 .name(doll.getName())
-                .attribute1(doll.getAttribute1())
-                .attribute2(doll.getAttribute2())
+                .attribute(doll.getAttribute())
                 .rare(doll.getRare())
                 .weaponType(doll.getWeaponType())
                 .job(doll.getJob())
-                .squad(doll.getSquad())
                 .build();
     }
 }
