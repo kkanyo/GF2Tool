@@ -1,5 +1,7 @@
 # GF2Tool - Game Wiki Platform
 
+link: https://github.com/kkanyo/GF2Tool
+
 > A full-stack web application portfolio project using modern Java/React stack
 
 **[한국어](README.md) | [日本語](README_JA.md)**

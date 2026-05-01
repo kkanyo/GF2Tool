@@ -1,5 +1,7 @@
 # GF2Tool - 게임 정보 위키 플랫폼
 
+링크: https://github.com/kkanyo/GF2Tool
+
 > 모던 Java/React 스택을 활용한 풀스택 웹 애플리케이션 포트폴리오 프로젝트
 
 **[English](README_EN.md) | [日本語](README_JA.md)**
