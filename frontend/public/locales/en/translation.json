@@ -23,7 +23,8 @@
     "attackBonus": "Attack Bonus",
     "defenseBonus": "Defense Bonus",
     "healthBonus": "Health Bonus",
-    "weakness": "Weakness"
+    "weakness": "Weakness",
+    "stats": "Stats"
   },
   "dollList": {
     "title": "Doll List",
@@ -39,6 +40,25 @@
     "next": "Next",
     "page": "Page",
     "items": "items"
+  },
+  "dollDetail": {
+    "backToList": "Back to List",
+    "basicInfo": "Basic Info",
+    "loadingStats": "Loading stats…",
+    "statsError": "Failed to load stats.",
+    "notFound": "Doll data not found.",
+    "edit": "Edit",
+    "noId": "Stats unavailable (no ID returned from API)."
+  },
+  "dollEdit": {
+    "title": "Edit Doll Info",
+    "backToDetail": "Back to Detail",
+    "loadingStats": "Loading current stats…",
+    "fetchError": "Failed to load current stats.",
+    "save": "Save Changes",
+    "saving": "Saving…",
+    "error": "Failed to save changes.",
+    "success": "Changes saved successfully."
   },
   "dollRegister": {
     "title": "Doll Information Registration",

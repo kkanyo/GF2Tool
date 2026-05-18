@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   DollApi,
   DollRare,
@@ -50,6 +51,7 @@ function toDisplayValue(value: unknown) {
 function DollListPage() {
   const api = useMemo(() => new DollApi(), []);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(DEFAULT_PAGE_SIZE);
@@ -334,7 +336,7 @@ function DollListPage() {
               </label>
 
               <label className="flex flex-col gap-1">
-                <span className="text-xs font-medium text-zinc-400">페이지 크기</span>
+                <span className="text-xs font-medium text-zinc-400">{t('dollList.pageSize')}</span>
                 <select
                   className="h-10 rounded-lg border border-zinc-800 bg-zinc-900 px-3 text-sm text-zinc-100 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 focus:outline-none"
                   value={size}
@@ -458,7 +460,13 @@ function DollListPage() {
                     ? displayDolls.map((d, idx) => {
                         const key = d.id ?? `${d.name ?? 'unknown'}-${idx}`;
                         return (
-                          <tr key={key} className="hover:bg-zinc-950/30">
+                          <tr
+                            key={key}
+                            className="cursor-pointer hover:bg-zinc-950/30"
+                            onClick={() =>
+                              navigate(`/dolls/${d.id ?? 'unknown'}`, { state: { doll: d } })
+                            }
+                          >
                             <td className="px-4 py-3 font-medium whitespace-nowrap text-zinc-100">
                               {toDisplayValue(d.name)}
                             </td>
@@ -517,7 +525,13 @@ function DollListPage() {
                     ? displayDolls.map((d, idx) => {
                         const key = d.id ?? `${d.name ?? 'unknown'}-${idx}`;
                         return (
-                          <tr key={key} className="hover:bg-zinc-950/30">
+                          <tr
+                            key={key}
+                            className="cursor-pointer hover:bg-zinc-950/30"
+                            onClick={() =>
+                              navigate(`/dolls/${d.id ?? 'unknown'}`, { state: { doll: d } })
+                            }
+                          >
                             <td className="px-4 py-3 font-medium whitespace-nowrap text-zinc-100">
                               {toDisplayValue(d.name)}
                             </td>

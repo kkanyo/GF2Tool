@@ -41,6 +41,25 @@
     "page": "페이지",
     "items": "항목"
   },
+  "dollDetail": {
+    "backToList": "목록으로",
+    "basicInfo": "기본 정보",
+    "loadingStats": "스탯 로딩 중…",
+    "statsError": "스탯 로드에 실패했습니다.",
+    "notFound": "인형 데이터를 찾을 수 없습니다.",
+    "edit": "수정",
+    "noId": "ID를 가져올 수 없어 스탯을 표시할 수 없습니다."
+  },
+  "dollEdit": {
+    "title": "인형 정보 수정",
+    "backToDetail": "상세로 돌아가기",
+    "loadingStats": "현재 스탯 로딩 중…",
+    "fetchError": "현재 스탯 로드에 실패했습니다.",
+    "save": "저장하기",
+    "saving": "저장 중…",
+    "error": "저장에 실패했습니다.",
+    "success": "정상적으로 저장되었습니다."
+  },
   "dollRegister": {
     "title": "인형 정보 등록",
     "register": "등록하기",

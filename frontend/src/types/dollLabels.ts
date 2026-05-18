@@ -1,5 +1,11 @@
 import type { TFunction } from 'i18next';
-import type { DollRare as DollRareType, Job, PhaseAttribute, WeaponType } from '../api/generated';
+import type {
+  BulletType,
+  DollRare as DollRareType,
+  Job,
+  PhaseAttribute,
+  WeaponType,
+} from '../api/generated';
 
 export type DollLocale = 'ja' | 'ko' | 'en';
 
@@ -25,4 +31,8 @@ export function getWeaponTypeLabel(t: TFunction, value: WeaponType): string {
 
 export function getJobLabel(t: TFunction, value: Job): string {
   return t(`enums.jobs.${value}`);
+}
+
+export function getBulletTypeLabel(t: TFunction, value: BulletType): string {
+  return t(`enums.bulletTypes.${value}`);
 }
