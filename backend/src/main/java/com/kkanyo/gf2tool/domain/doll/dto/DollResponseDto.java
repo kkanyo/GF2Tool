@@ -37,6 +37,7 @@ public class DollResponseDto {
 
     public static DollResponseDto fromEntity(Doll doll) {
         return DollResponseDto.builder()
+                .id(doll.getId())
                 .name(doll.getName())
                 .attribute(doll.getAttribute())
                 .rare(doll.getRare())
